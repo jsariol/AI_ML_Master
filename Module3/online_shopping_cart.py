@@ -5,7 +5,8 @@ class ItemToPurchase:
         self.item_price = 0.0
         self.item_quantity = 0
 
-    # Method to print item cost
+    # Method to print item cost. I wanted to format the output to have 2 decimal places so it reflects a price in a more realistic way. It also manages a 
+    # scenario where the item price has a decimal value like $4.50 or $19.99
     def print_item_cost(self):
         total_cost = self.item_price * self.item_quantity
         print(f"{self.item_name} {self.item_quantity} @ ${self.item_price:.2f} = ${total_cost:.2f}")
@@ -26,7 +27,7 @@ item2.item_name = input("Enter the item name:\n")
 item2.item_price = float(input("Enter the item price:\n"))
 item2.item_quantity = int(input("Enter the item quantity:\n"))
 
-#Dr Gang, here I wanted to play with the formatting of the output. I used f-strings to format the output and center it. I also used max_width to ensure that the output is aligned properly.
+#Here I wanted to play with the formatting of the output. I used f-strings to format the output and center it. I also used max_width to ensure that the output is aligned properly.
 line1 = f"{item1.item_name} {item1.item_quantity} @ ${item1.item_price:.2f} = ${item1.item_price * item1.item_quantity:.2f}"
 line2 = f"{item2.item_name} {item2.item_quantity} @ ${item2.item_price:.2f} = ${item2.item_price * item2.item_quantity:.2f}"
 max_width = max(len(line1), len(line2))
