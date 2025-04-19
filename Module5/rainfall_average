@@ -1,0 +1,25 @@
+# Dictionary with month names
+months_dict = {
+    1: "January", 2: "February", 3: "March", 
+    4: "April", 5: "May", 6: "June",
+    7: "July", 8: "August", 9: "September",
+    10: "October", 11: "November", 12: "December"
+}
+
+years = int(input("Enter the number of years:\n"))
+
+total_rainfall = 0.0
+total_months = years * 12
+
+for year in range(1, years + 1):
+    print(f"\nYear {year}")
+    for month in range(1, 13):
+        month_name = months_dict[month]  
+        rainfall = float(input(f"Enter rainfall for {month_name} (in inches): "))
+        total_rainfall += rainfall
+
+average_rainfall = total_rainfall / total_months
+
+print(f"\nNumber of months: {total_months}")
+print(f"Total inches of rainfall: {total_rainfall:.2f}")
+print(f"Average rainfall per month: {average_rainfall:.2f}")
