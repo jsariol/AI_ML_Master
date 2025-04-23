@@ -1,9 +1,17 @@
-from collections import namedtuple
+# List example
+fruits = ["apple", "banana", "cherry"] # fruits list is ['apple', 'banana', 'cherry']
 
-Player = namedtuple('Player', ['name', 'number', 'position', 'team'])
+# Insert an element at a specific position
+fruits.insert(1, "orange")  # fruits list is now ['apple', 'orange', 'banana', 'cherry']
 
-cam = Player('Cam Newton', '1', 'Quarterback', 'Carolina Panthers')
-lebron = Player('Lebron James', '23', 'Small forward', 'Los Angeles Lakers')
+# Append an element at the end
+fruits.append("grape")  # fruits list is now ['apple', 'orange', 'banana', 'cherry', 'grape']
 
-print(cam.name + '(#' + cam.number + ')' + ' is a ' + cam.position + ' for the ' + cam.team + '.')
-print(lebron.name + '(#' + lebron.number + ')' + ' is a ' + lebron.position + ' for the ' + lebron.team + '.')
+# Update an element
+fruits[2] = "blueberry"  # fruits list is now ['apple', 'orange', 'blueberry', 'cherry', 'grape']
+
+# Remove an element by value
+fruits.remove("cherry")  # fruits list is now ['apple', 'orange', 'blueberry', 'grape']
+
+# Remove an element by index
+del fruits[0]  # fruits list is now ['orange', 'blueberry', 'grape']
