@@ -1,5 +1,5 @@
 from typing import Any, Iterator, Tuple, Optional
-from bst import BinarySearchTree
+from .bst import BinarySearchTree
 
 
 class BSTMap:
